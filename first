@@ -1,0 +1,16 @@
+from bs4 import BeautifulSoup
+import pandas as pd
+import requests
+import urllib.request
+
+URL = 'https://www.geeksforgeeks.org/coding-quotes-for-software-engineers/'
+
+webpage = requests.get(URL)
+soup = BeautifulSoup(webpage.text, 'html.parser')
+# hoteldesc = soup.find('div', attrs={'class': 'text'})
+hoteldesc = soup.find('div', class_='text') 
+
+blockquotes = hoteldesc.find_all('blockquote')
+
+for quote in blockquotes:
+    print(quote.text)
