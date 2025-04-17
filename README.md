@@ -41,6 +41,3 @@ The script will print all coding quotes found in the blockquotes section of the 
 - requests
 - pandas (though not currently used in processing)
 
-## License
-
-This project is open source and available under the MIT License.
